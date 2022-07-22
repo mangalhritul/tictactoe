@@ -19,9 +19,13 @@ function checkForWinner() {
         let check = combination.every(idx => cells[idx].innerText.trim() == currentPlayer)
         if (check) {
             highlightCells(combination)
+            alert("player " + currentPlayer + " won the match! ")
+            alert("start new game")
+            window.location.reload();
         }
     })
 }
+
 
 function highlightCells(combination) {
     combination.forEach(function(idx) {
